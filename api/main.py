@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from model import predict_churn
+
 app = FastAPI(
   title="Customer Churn Prediction API",
   description="Predicts whether a customer will churn or not",

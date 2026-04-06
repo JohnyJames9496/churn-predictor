@@ -13,6 +13,7 @@ def predict_churn(data: dict) -> dict:
   prediction = model.predict(features)[0]
   probability = model.predict_proba(features)[0][1] 
 
+  #Return results 
   return {
     'churn_prediction': int(prediction),
     'churn_probability': float(probability),

@@ -1,6 +1,6 @@
 # Customer Churn Prediction System
 
-A production-grade Machine Learning system that predicts whether a telecom customer will churn or not.
+A production-grade Machine Learning system that predicts whether a telecom customer will churn or not churn.
 
 Built with Python, Scikit-learn, FastAPI, and Streamlit.
 

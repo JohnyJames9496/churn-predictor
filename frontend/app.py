@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 
 # Page config
 st.set_page_config(
@@ -80,7 +81,8 @@ if st.button(" Predict Churn", use_container_width=True):
 
     # Call FastAPI
     try:
-        response = requests.post("http://127.0.0.1:8000/predict", json=data)
+        API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+        response = requests.post(f"{API_URL}/predict", json=data)
         result = response.json()
 
         prob = result['churn_probability'] * 100
